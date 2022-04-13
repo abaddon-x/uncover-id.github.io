@@ -12,9 +12,14 @@
 
 <style type="text/css" media="all">
   
-  .slider .caption, section h3 {
+  .slider .caption, section h4 {
     text-shadow: 1px 1px 3px rgba(0,0,0,1);
   }
+
+
+.rd {
+border-radius: 5px !important;
+}
   
   .slider .caption {
     margin: 5% auto !important;
@@ -25,12 +30,8 @@
     margin-top: 50px;
   }
   
-  .portfolio .btn {
-    border-radius: 10px;
-  }
-  
-  .portfolio img {
-    border: 1px solid #fff;
+  .portfolio .card {
+    margin: 20px auto !important;
   }
   
   .navbar-fixed {
@@ -67,13 +68,17 @@
   display: none;
   }
   
-  .r {
+  #z {
+    display: none;
+  }
+  
+  .rt {
     border-radius: 30px;
   }
-
-.rd {
-border-radius: 5px !important;
-}
+  
+  .r {
+    border-radius: 10px;
+  }
 
 .pst {
 margin: 45px auto !important;
@@ -98,6 +103,12 @@ border: 0px solid rgba(255,255,255,0);
 margin: 5px auto !important;
 }
 
+#y img, #z img {
+box-shadow: 0 0 10px #424242, 0 0 20px #424242;
+backdrop-filter: blur(5px);
+border: 1px solid rgba(255,255,255,0.5) !important;
+}
+
 .profile .materialboxed {
   margin-left: auto !important;
   margin-right: auto !important;
@@ -105,7 +116,6 @@ margin: 5px auto !important;
 
 .trs {
 background: rgba(255,255,255,0.5) !important;
-border-radius: 5px !important;
 backdrop-filter: blur(5px);
 }
 
@@ -113,15 +123,29 @@ section {
   padding: 15px auto !important;
 }
 
-.carousel-item, .carousel {
-  min-height: 465px !important;
+.carousel .carousel-item {
+min-width: 320px !important;
+  min-height: 480px !important;
   margin: 50px auto !important;
   border: 1px solid hidden;
 }
 
-.service .card {
-  margin: 20px auto !important;
-  border: 0px solid rgba(255,255,255,0.1) !important;
+.profile .carousel .carousel-item .card-panel {
+min-width: 320px !important;
+  min-height: 250px !important;
+  margin: 50px auto !important;
+  border: 1px solid hidden;
+}
+
+.zt {
+margin-top: 40px !important;
+}
+
+.op {
+box-shadow: 0 0 10px #424242, 0 0 20px #424242;
+backdrop-filter: blur(5px);
+border: 1px solid rgba(255,255,255,0.5) !important;
+margin: 5px;
 }
 
 .zzz th {
@@ -129,6 +153,7 @@ section {
 }
   
 </style>
+
 
 <body id="home" class="home scrollspy white-text">
   
@@ -495,7 +520,9 @@ document.addEventListener('DOMContentLoaded', function() {
    M.Collapsible.init(cB);
    
    var cR = document.querySelectorAll('.carousel');
-   M.Carousel.init(cR);
+   M.Carousel.init(cR, {
+     indicators: true
+   });
   
   var mB = document.querySelectorAll('.materialboxed');
   M.Materialbox.init(mB);
@@ -533,28 +560,24 @@ if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
 
 }
 
+function e() {
+  
+  document.getElementById("x").style.display = "block";
+  document.getElementById("z").style.display = "none";
+  document.getElementById("y").style.display = "none";
+}
+
 function c() {
   
   document.getElementById("y").style.display = "block";
   document.getElementById("z").style.display = "none";
   document.getElementById("x").style.display = "none";
-  
 }
 
 function d() {
-  
   document.getElementById("z").style.display = "block";
   document.getElementById("y").style.display = "none";
   document.getElementById("x").style.display = "none";
-  
-}
-
-function e() {
-  
-  document.getElementById("x").style.display = "block";
-  document.getElementById("y").style.display = "none";
-  document.getElementById("z").style.display = "none";
-  
 }
   
 </script>
